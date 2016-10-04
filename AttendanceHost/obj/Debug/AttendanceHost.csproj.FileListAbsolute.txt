@@ -1,0 +1,8 @@
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\bin\Debug\AttendanceHost.exe.config
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\bin\Debug\AttendanceHost.exe
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\bin\Debug\AttendanceHost.pdb
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\bin\Debug\AttendanceLib.dll
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\bin\Debug\AttendanceLib.pdb
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.csprojResolveAssemblyReference.cache
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.exe
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.pdb

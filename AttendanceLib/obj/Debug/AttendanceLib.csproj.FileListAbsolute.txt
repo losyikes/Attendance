@@ -1,0 +1,5 @@
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\bin\Debug\AttendanceLib.dll.config
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\bin\Debug\AttendanceLib.dll
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\bin\Debug\AttendanceLib.pdb
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\obj\Debug\AttendanceLib.dll
+C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\obj\Debug\AttendanceLib.pdb
