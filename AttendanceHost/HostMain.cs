@@ -16,19 +16,28 @@ namespace AttendanceHost
             Uri baseAddress = new Uri("http://localhost:8000/AttendanceLib/");
 
             ServiceHost selfHost = new ServiceHost(typeof(EchoService), baseAddress);
+            ServiceHost selfHost2 = new ServiceHost(typeof(AttendanceTools), baseAddress);
+
 
             try
             {
                 // Step 3 Add a service endpoint.
                 selfHost.AddServiceEndpoint(typeof(IEchoService), new WSHttpBinding(), "EchoService");
+                selfHost2.AddServiceEndpoint(typeof(IAttendanceTools), new WSHttpBinding(), "AttendanceTools");
 
                 //Step 4 Enable metadata exchange.
                 ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
                 smb.HttpGetEnabled = true;
                 selfHost.Description.Behaviors.Add(smb);
 
+                ServiceMetadataBehavior smb2 = new ServiceMetadataBehavior();
+                smb2.HttpGetEnabled = true;
+                selfHost2.Description.Behaviors.Add(smb2);
+
                 // Step 5 Start the service.
-                selfHost.Open();
+                //selfHost.Open();
+                selfHost2.Open();
+
                 Console.WriteLine("The service is ready.");
                 Console.WriteLine("Press <ENTER> to terminate service.");
                 Console.WriteLine();

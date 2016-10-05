@@ -17,7 +17,7 @@ namespace AttendanceLib
             throw new NotImplementedException();
         }
 
-        string IAttendanceTools.LoginUser(PhysicalAddress mac, IPAddress ip)
+        string IAttendanceTools.LoginUser(string mac, IPAddress ip)
         {
             throw new NotImplementedException();
         }

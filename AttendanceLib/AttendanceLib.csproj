@@ -48,6 +48,7 @@
     <Compile Include="AttendanceTools.cs" />
     <Compile Include="IAttendanceTools.cs" />
     <Compile Include="IEchoService.cs" />
+    <Compile Include="persist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EchoService.cs" />
     <Compile Include="Student.cs" />

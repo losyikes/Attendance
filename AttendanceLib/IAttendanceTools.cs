@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.Text;
 using System.Net;
 using System.Net.NetworkInformation;
-using AttendanceHost;
 
 namespace AttendanceLib
 {
@@ -15,7 +14,7 @@ namespace AttendanceLib
     public interface IAttendanceTools
     {
         [OperationContract]
-        string LoginUser(PhysicalAddress mac, IPAddress ip);
+        string LoginUser(string mac, IPAddress ip);
         bool UpdateLocation();
         bool UpdateAttendance();
         bool CheckAdminAccess();
