@@ -6,3 +6,11 @@ C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLi
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.csprojResolveAssemblyReference.cache
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.exe
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceHost\obj\Debug\AttendanceHost.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.exe.config
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.exe
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.exe
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\bin\Debug\AttendanceLib.dll
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\bin\Debug\AttendanceLib.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.csprojResolveAssemblyReference.cache

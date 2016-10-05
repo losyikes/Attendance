@@ -3,3 +3,9 @@ C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLi
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\bin\Debug\AttendanceLib.pdb
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\obj\Debug\AttendanceLib.dll
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceLib\obj\Debug\AttendanceLib.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\bin\Debug\AttendanceLib.dll.config
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\bin\Debug\AttendanceLib.dll
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\bin\Debug\AttendanceLib.pdb
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\obj\Debug\AttendanceLib.csprojResolveAssemblyReference.cache
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\obj\Debug\AttendanceLib.dll
+C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceLib\obj\Debug\AttendanceLib.pdb

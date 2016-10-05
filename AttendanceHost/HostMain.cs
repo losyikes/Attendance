@@ -9,7 +9,7 @@ using System.ServiceModel.Description;
 
 namespace AttendanceHost
 {
-    class Program
+    class HostMain
     {
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace AttendanceHost
                 selfHost.AddServiceEndpoint(typeof(IEchoService), new WSHttpBinding(), "EchoService");
 
                 //Step 4 Enable metadata exchange.
-               ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
                 smb.HttpGetEnabled = true;
                 selfHost.Description.Behaviors.Add(smb);
 

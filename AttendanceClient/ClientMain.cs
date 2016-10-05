@@ -7,7 +7,7 @@ using AttendanceClient.ServiceReference1;
 
 namespace AttendanceClient
 {
-    class Program
+    class ClientMain
     {
         static void Main(string[] args)
         {
