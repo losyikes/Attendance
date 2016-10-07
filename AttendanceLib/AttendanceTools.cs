@@ -14,7 +14,12 @@ namespace AttendanceLib
     {
         public bool CheckAdminAccess()
         {
-            throw new NotImplementedException();
+            bool AdminAccess = false;
+            if (persist.currentUser.Userlevel == 2)
+            {
+                AdminAccess = true;
+            }
+            return AdminAccess;
         }
 
         public string LoginUser(string mac, IPAddress ip)
@@ -45,7 +50,11 @@ namespace AttendanceLib
 
         public List<Student> ShowAttendance()
         {
-            throw new NotImplementedException();
+            if (CheckAdminAccess())
+            {
+                return persist.studentList;
+            }
+            return null;
         }
 
         public bool UpdateAttendance(string mac)
@@ -58,6 +67,7 @@ namespace AttendanceLib
                     if (persist.studentList[i].IDMacAddress == mac)
                     {
                         persist.studentList[i].Absent = false;
+                        persist.currentUser = persist.studentList[i];
                         absenceSet = true;
                     }
                 }

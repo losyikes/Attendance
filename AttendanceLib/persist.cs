@@ -7,9 +7,10 @@ using System.Net.NetworkInformation;
 
 namespace AttendanceLib
 {
-    class persist
+    public class persist
     {
         public static List<Student> studentList = new List<Student>();
+        public static User currentUser;
 
         public persist()
         {
