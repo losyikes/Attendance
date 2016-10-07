@@ -4,10 +4,10 @@ namespace AttendanceLib
 {
     public class Student : User
     {
-        public Student(string mac, IPAddress ip)
+        public bool Absent { get; set; }
+        public Student(string mac)
         {
             IDMacAddress = mac;
-            IPAddressStudent = ip;
             Userlevel = 1;
         }
     }

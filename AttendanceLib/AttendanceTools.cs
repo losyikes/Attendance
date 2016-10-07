@@ -50,7 +50,30 @@ namespace AttendanceLib
 
         public bool UpdateAttendance(string mac)
         {
-            throw new NotImplementedException();
+            try
+            {
+                bool absenceSet = false;
+                for (int i = 0; i < persist.studentList.Count; i++)
+                {
+                    if (persist.studentList[i].IDMacAddress == mac)
+                    {
+                        persist.studentList[i].Absent = false;
+                        absenceSet = true;
+                    }
+                }
+                if (absenceSet)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public bool UpdateLocation(IPAddress ip)
