@@ -15,8 +15,8 @@ namespace AttendanceLib
     {
         [OperationContract]
         string LoginUser(string mac, IPAddress ip);
-        bool UpdateLocation();
-        bool UpdateAttendance();
+        bool UpdateLocation(IPAddress ip);
+        bool UpdateAttendance(string mac);
         bool CheckAdminAccess();
         [OperationContract]
         List<Student> ShowAttendance();

@@ -12,29 +12,71 @@ namespace AttendanceLib
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AttendanceTools" in both code and config file together.
     public class AttendanceTools : IAttendanceTools
     {
-        bool IAttendanceTools.CheckAdminAccess()
+        public bool CheckAdminAccess()
         {
             throw new NotImplementedException();
         }
 
-        string IAttendanceTools.LoginUser(string mac, IPAddress ip)
+        public string LoginUser(string mac, IPAddress ip)
+        {
+            if (UpdateLocation(ip))
+            {
+                if (UpdateAttendance(mac))
+                {
+                    return "logget ind på skolen";
+                }
+                else
+                {
+                    return "login er gået galt";
+                }
+            }
+            else
+            {
+                if (UpdateAttendance(mac))
+                {
+                    return "logget ind hjemmefra";
+                }
+                else
+                {
+                    return "login er gået galt";
+                }
+            }
+        }
+
+        public List<Student> ShowAttendance()
         {
             throw new NotImplementedException();
         }
 
-        List<Student> IAttendanceTools.ShowAttendance()
+        public bool UpdateAttendance(string mac)
         {
             throw new NotImplementedException();
         }
 
-        bool IAttendanceTools.UpdateAttendance()
+        public bool UpdateLocation(IPAddress ip)
         {
-            throw new NotImplementedException();
-        }
+            //public static bool IsLocalIpAddress(string host)
+            string client = ip.ToString();
+            try
+            { // get client IP addresses
+                IPAddress[] clientIPs = Dns.GetHostAddresses(client);
+                // get local IP addresses
+                IPAddress[] localIPs = Dns.GetHostAddresses(Dns.GetHostName());
 
-        bool IAttendanceTools.UpdateLocation()
-        {
-            throw new NotImplementedException();
+                // test if any client IP equals to any local IP or to localhost
+                foreach (IPAddress clientIP in clientIPs)
+                {
+                    // is localhost
+                    if (IPAddress.IsLoopback(clientIP)) return true;
+                    // is local address
+                    foreach (IPAddress localIP in localIPs)
+                    {
+                        if (clientIP.Equals(localIP)) return true;
+                    }
+                }
+            }
+            catch { }
+            return false;
         }
     }
 }
