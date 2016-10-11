@@ -12,7 +12,7 @@ namespace AttendanceLib
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AttendanceTools" in both code and config file together.
     public class AttendanceTools : IAttendanceTools
     {
-        persist pers = new persist();
+        
         public bool CheckAdminAccess()
         {
             bool AdminAccess = false;
