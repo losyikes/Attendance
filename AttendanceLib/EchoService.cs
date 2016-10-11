@@ -12,7 +12,7 @@ namespace AttendanceLib
     {
         public string EchoString(string text)
         {
-            return string.Format(text);
+            return text;
         }
 
         //public CompositeType GetDataUsingDataContract(CompositeType composite)

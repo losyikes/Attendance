@@ -40,12 +40,12 @@ namespace AttendanceHost
 
                 // Close the ServiceHostBase to shutdown the service.
 
-                selfHost.Close();
+                selfHost2.Close();
             }
             catch (CommunicationException ce)
             {
                 Console.WriteLine("An exception occurred: {0}", ce.Message);
-                selfHost.Abort();
+                selfHost2.Abort();
             }
         }
     }
