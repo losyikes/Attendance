@@ -16,13 +16,13 @@ namespace AttendanceLib
         [OperationContract]
         string LoginUser(string mac, IPAddress ip);
         
-        bool UpdateLocation(IPAddress ip);
+        bool IsValidIp(IPAddress ip);
         [OperationContract]
-        bool UpdateAttendance(string mac);
+        bool IsAttendanceSet(string mac);
         [OperationContract]
         bool CheckAdminAccess();
         [OperationContract]
-        List<Student> ShowAttendance();
+        string ShowAttendanceList();
         
     }
 }

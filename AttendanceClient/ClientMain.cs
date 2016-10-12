@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using AttendanceClient.ServiceReference1;
 using AttendanceClient.ServiceReference2;
+using System.Net.NetworkInformation;
+using System.Net.Sockets;
+using System.Net;
 
 
 namespace AttendanceClient
@@ -13,16 +16,36 @@ namespace AttendanceClient
     {
         static void Main(string[] args)
         {
-            EchoServiceClient client = new EchoServiceClient();
+            ClientMain cm = new ClientMain();
+            cm.Run();
+            //EchoServiceClient client = new EchoServiceClient();
+            
+            //Console.WriteLine(client.EchoString("hello world"));
+            
+        }
+        void Run()
+        {
             AttendanceToolsClient toolClient = new AttendanceToolsClient();
-            //foreach(var Item in toolClient.ShowAttendance())
-            //{
-            //    Console.WriteLine(Item.IDMacAddress);
-            //}
-            Console.WriteLine(client.EchoString("hello world"));
+            toolClient.LoginUser(GetMacAddresse(), GetLocalIPAddress());
+            Console.WriteLine(toolClient.ShowAttendanceList());
             Console.WriteLine("press enter to exit");
             Console.ReadLine();
-            client.Close();
+            toolClient.Close();
+        }
+        IPAddress GetLocalIPAddress()
+        {
+            if (!NetworkInterface.GetIsNetworkAvailable())
+                return null;
+
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+
+            return host.AddressList.FirstOrDefault(ip => ip.AddressFamily == AddressFamily.InterNetwork);
+        }
+        string GetMacAddresse()
+        {
+            return (from nic in NetworkInterface.GetAllNetworkInterfaces()
+                    where nic.OperationalStatus == OperationalStatus.Up
+                    select nic.GetPhysicalAddress()).FirstOrDefault().ToString();
         }
     }
 }

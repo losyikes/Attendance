@@ -15,21 +15,22 @@ namespace AttendanceLib
         persist dbStudents = new persist();
         public bool CheckAdminAccess()
         {
-            bool AdminAccess = false;
-            if (persist.currentUser.Userlevel == 2)
-            {
-                AdminAccess = true;
-            }
-            return AdminAccess;
+            //bool AdminAccess = false;
+            //if (persist.currentUser.Userlevel == 2)
+            //{
+            //    AdminAccess = true;
+            //}
+            //return AdminAccess;
+            return true;
         }
 
         public string LoginUser(string mac, IPAddress ip)
         {
             
 
-            if (UpdateLocation(ip))
+            if (IsValidIp(ip))
             {
-                if (UpdateAttendance(mac))
+                if (IsAttendanceSet(mac))
                 {
                     return "logget ind på skolen";
                 }
@@ -40,7 +41,7 @@ namespace AttendanceLib
             }
             else
             {
-                if (UpdateAttendance(mac))
+                if (IsAttendanceSet(mac))
                 {
                     return "logget ind hjemmefra";
                 }
@@ -51,16 +52,23 @@ namespace AttendanceLib
             }
         }
 
-        public List<Student> ShowAttendance()
+        public string ShowAttendanceList()
         {
             if (CheckAdminAccess())
             {
-                return persist.studentList;
+                string attendanceString = "";
+                int i = 0;
+                foreach(Student student in persist.studentList)
+                {
+                    i++;
+                    attendanceString += i.ToString() + ". " + student.Name + " " + "Mac: " + student.IDMacAddress + "\n";
+                }
+                return attendanceString;
             }
             return null;
         }
 
-        public bool UpdateAttendance(string mac)
+        public bool IsAttendanceSet(string mac)
         {
             try
             {
@@ -89,7 +97,7 @@ namespace AttendanceLib
             }
         }
 
-        public bool UpdateLocation(IPAddress ip)
+        public bool IsValidIp(IPAddress ip)
         {
             //public static bool IsLocalIpAddress(string host)
             string client = ip.ToString();

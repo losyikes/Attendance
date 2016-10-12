@@ -9,94 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace AttendanceClient.ServiceReference2 {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/AttendanceLib")]
-    [System.SerializableAttribute()]
-    public partial class Student : AttendanceClient.ServiceReference2.User {
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool AbsentField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Absent {
-            get {
-                return this.AbsentField;
-            }
-            set {
-                if ((this.AbsentField.Equals(value) != true)) {
-                    this.AbsentField = value;
-                    this.RaisePropertyChanged("Absent");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/AttendanceLib")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(AttendanceClient.ServiceReference2.Student))]
-    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IDMacAddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int UserlevelField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IDMacAddress {
-            get {
-                return this.IDMacAddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IDMacAddressField, value) != true)) {
-                    this.IDMacAddressField = value;
-                    this.RaisePropertyChanged("IDMacAddress");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Userlevel {
-            get {
-                return this.UserlevelField;
-            }
-            set {
-                if ((this.UserlevelField.Equals(value) != true)) {
-                    this.UserlevelField = value;
-                    this.RaisePropertyChanged("Userlevel");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.IAttendanceTools")]
@@ -108,11 +21,11 @@ namespace AttendanceClient.ServiceReference2 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/LoginUser", ReplyAction="http://tempuri.org/IAttendanceTools/LoginUserResponse")]
         System.Threading.Tasks.Task<string> LoginUserAsync(string mac, System.Net.IPAddress ip);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/UpdateAttendance", ReplyAction="http://tempuri.org/IAttendanceTools/UpdateAttendanceResponse")]
-        bool UpdateAttendance(string mac);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet", ReplyAction="http://tempuri.org/IAttendanceTools/IsAttendanceSetResponse")]
+        bool IsAttendanceSet(string mac);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/UpdateAttendance", ReplyAction="http://tempuri.org/IAttendanceTools/UpdateAttendanceResponse")]
-        System.Threading.Tasks.Task<bool> UpdateAttendanceAsync(string mac);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet", ReplyAction="http://tempuri.org/IAttendanceTools/IsAttendanceSetResponse")]
+        System.Threading.Tasks.Task<bool> IsAttendanceSetAsync(string mac);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CheckAdminAccess", ReplyAction="http://tempuri.org/IAttendanceTools/CheckAdminAccessResponse")]
         bool CheckAdminAccess();
@@ -120,11 +33,11 @@ namespace AttendanceClient.ServiceReference2 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CheckAdminAccess", ReplyAction="http://tempuri.org/IAttendanceTools/CheckAdminAccessResponse")]
         System.Threading.Tasks.Task<bool> CheckAdminAccessAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendance", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceResponse")]
-        AttendanceClient.ServiceReference2.Student[] ShowAttendance();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse")]
+        string ShowAttendanceList();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendance", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceResponse")]
-        System.Threading.Tasks.Task<AttendanceClient.ServiceReference2.Student[]> ShowAttendanceAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse")]
+        System.Threading.Tasks.Task<string> ShowAttendanceListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -162,12 +75,12 @@ namespace AttendanceClient.ServiceReference2 {
             return base.Channel.LoginUserAsync(mac, ip);
         }
         
-        public bool UpdateAttendance(string mac) {
-            return base.Channel.UpdateAttendance(mac);
+        public bool IsAttendanceSet(string mac) {
+            return base.Channel.IsAttendanceSet(mac);
         }
         
-        public System.Threading.Tasks.Task<bool> UpdateAttendanceAsync(string mac) {
-            return base.Channel.UpdateAttendanceAsync(mac);
+        public System.Threading.Tasks.Task<bool> IsAttendanceSetAsync(string mac) {
+            return base.Channel.IsAttendanceSetAsync(mac);
         }
         
         public bool CheckAdminAccess() {
@@ -178,12 +91,12 @@ namespace AttendanceClient.ServiceReference2 {
             return base.Channel.CheckAdminAccessAsync();
         }
         
-        public AttendanceClient.ServiceReference2.Student[] ShowAttendance() {
-            return base.Channel.ShowAttendance();
+        public string ShowAttendanceList() {
+            return base.Channel.ShowAttendanceList();
         }
         
-        public System.Threading.Tasks.Task<AttendanceClient.ServiceReference2.Student[]> ShowAttendanceAsync() {
-            return base.Channel.ShowAttendanceAsync();
+        public System.Threading.Tasks.Task<string> ShowAttendanceListAsync() {
+            return base.Channel.ShowAttendanceListAsync();
         }
     }
 }

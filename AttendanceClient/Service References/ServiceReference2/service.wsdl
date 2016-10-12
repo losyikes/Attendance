@@ -7,7 +7,6 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Net" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import namespace="http://schemas.datacontract.org/2004/07/AttendanceLib" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAttendanceTools_LoginUser_InputMessage">
@@ -16,11 +15,11 @@
   <wsdl:message name="IAttendanceTools_LoginUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginUserResponse" />
   </wsdl:message>
-  <wsdl:message name="IAttendanceTools_UpdateAttendance_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateAttendance" />
+  <wsdl:message name="IAttendanceTools_IsAttendanceSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAttendanceSet" />
   </wsdl:message>
-  <wsdl:message name="IAttendanceTools_UpdateAttendance_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateAttendanceResponse" />
+  <wsdl:message name="IAttendanceTools_IsAttendanceSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAttendanceSetResponse" />
   </wsdl:message>
   <wsdl:message name="IAttendanceTools_CheckAdminAccess_InputMessage">
     <wsdl:part name="parameters" element="tns:CheckAdminAccess" />
@@ -28,28 +27,28 @@
   <wsdl:message name="IAttendanceTools_CheckAdminAccess_OutputMessage">
     <wsdl:part name="parameters" element="tns:CheckAdminAccessResponse" />
   </wsdl:message>
-  <wsdl:message name="IAttendanceTools_ShowAttendance_InputMessage">
-    <wsdl:part name="parameters" element="tns:ShowAttendance" />
+  <wsdl:message name="IAttendanceTools_ShowAttendanceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAttendanceList" />
   </wsdl:message>
-  <wsdl:message name="IAttendanceTools_ShowAttendance_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ShowAttendanceResponse" />
+  <wsdl:message name="IAttendanceTools_ShowAttendanceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAttendanceListResponse" />
   </wsdl:message>
   <wsdl:portType name="IAttendanceTools">
     <wsdl:operation name="LoginUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/LoginUser" message="tns:IAttendanceTools_LoginUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/LoginUserResponse" message="tns:IAttendanceTools_LoginUser_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="UpdateAttendance">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/UpdateAttendance" message="tns:IAttendanceTools_UpdateAttendance_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/UpdateAttendanceResponse" message="tns:IAttendanceTools_UpdateAttendance_OutputMessage" />
+    <wsdl:operation name="IsAttendanceSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet" message="tns:IAttendanceTools_IsAttendanceSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/IsAttendanceSetResponse" message="tns:IAttendanceTools_IsAttendanceSet_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="CheckAdminAccess">
       <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/CheckAdminAccess" message="tns:IAttendanceTools_CheckAdminAccess_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/CheckAdminAccessResponse" message="tns:IAttendanceTools_CheckAdminAccess_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ShowAttendance">
-      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendance" message="tns:IAttendanceTools_ShowAttendance_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceResponse" message="tns:IAttendanceTools_ShowAttendance_OutputMessage" />
+    <wsdl:operation name="ShowAttendanceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList" message="tns:IAttendanceTools_ShowAttendanceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse" message="tns:IAttendanceTools_ShowAttendanceList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAttendanceTools" type="tns:IAttendanceTools">
@@ -63,8 +62,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="UpdateAttendance">
-      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/UpdateAttendance" style="document" />
+    <wsdl:operation name="IsAttendanceSet">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/IsAttendanceSet" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -81,8 +80,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ShowAttendance">
-      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowAttendance" style="document" />
+    <wsdl:operation name="ShowAttendanceList">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowAttendanceList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

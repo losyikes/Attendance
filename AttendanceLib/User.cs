@@ -12,5 +12,7 @@ namespace AttendanceLib
         public string IDMacAddress { get; set; }
         [DataMember]
         public int Userlevel { get; set; }
+        [DataMember]
+        public string Name { get; set; }
     }
 }
