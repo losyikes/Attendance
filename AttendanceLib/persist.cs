@@ -26,6 +26,7 @@ namespace AttendanceLib
                 }
             }
             studentList.Add(new Student(mac));
+            currentUser = studentList.Last();
         }
     }
 }
