@@ -7,6 +7,8 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Net" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Net.Sockets" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Reflection" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAttendanceTools_LoginUser_InputMessage">
@@ -14,6 +16,30 @@
   </wsdl:message>
   <wsdl:message name="IAttendanceTools_LoginUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:LoginUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetCurrentUserType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserType" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetCurrentUserType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetCurrentUserTypeString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserTypeString" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetCurrentUserTypeString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentUserTypeStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowAttendanceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAttendanceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowAttendanceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowAttendanceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_LoginTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTeacher" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_LoginTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginTeacherResponse" />
   </wsdl:message>
   <wsdl:message name="IAttendanceTools_IsAttendanceSet_InputMessage">
     <wsdl:part name="parameters" element="tns:IsAttendanceSet" />
@@ -33,10 +59,74 @@
   <wsdl:message name="IAttendanceTools_ShowAttendanceList_OutputMessage">
     <wsdl:part name="parameters" element="tns:ShowAttendanceListResponse" />
   </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowStartMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowStartMenu" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowStartMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowStartMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_RegisterStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudent" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_RegisterStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowTeacherMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowTeacherMenu" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowTeacherMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowTeacherMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowTeacherMenuChoice_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowTeacherMenuChoice" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowTeacherMenuChoice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowTeacherMenuChoiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowStudents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ShowStudents" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_ShowStudents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ShowStudentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_AddStudent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStudent" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_AddStudent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStudentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_CreateFakeUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFakeUser" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_CreateFakeUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFakeUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetMenuLevel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuLevel" />
+  </wsdl:message>
+  <wsdl:message name="IAttendanceTools_GetMenuLevel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuLevelResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAttendanceTools">
     <wsdl:operation name="LoginUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/LoginUser" message="tns:IAttendanceTools_LoginUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/LoginUserResponse" message="tns:IAttendanceTools_LoginUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/GetCurrentUserType" message="tns:IAttendanceTools_GetCurrentUserType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeResponse" message="tns:IAttendanceTools_GetCurrentUserType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserTypeString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeString" message="tns:IAttendanceTools_GetCurrentUserTypeString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeStringResponse" message="tns:IAttendanceTools_GetCurrentUserTypeString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAttendanceStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceStatus" message="tns:IAttendanceTools_ShowAttendanceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceStatusResponse" message="tns:IAttendanceTools_ShowAttendanceStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/LoginTeacher" message="tns:IAttendanceTools_LoginTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/LoginTeacherResponse" message="tns:IAttendanceTools_LoginTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="IsAttendanceSet">
       <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet" message="tns:IAttendanceTools_IsAttendanceSet_InputMessage" />
@@ -50,11 +140,79 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList" message="tns:IAttendanceTools_ShowAttendanceList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse" message="tns:IAttendanceTools_ShowAttendanceList_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="ShowStartMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowStartMenu" message="tns:IAttendanceTools_ShowStartMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowStartMenuResponse" message="tns:IAttendanceTools_ShowStartMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/RegisterStudent" message="tns:IAttendanceTools_RegisterStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/RegisterStudentResponse" message="tns:IAttendanceTools_RegisterStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowTeacherMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenu" message="tns:IAttendanceTools_ShowTeacherMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenuResponse" message="tns:IAttendanceTools_ShowTeacherMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowTeacherMenuChoice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoice" message="tns:IAttendanceTools_ShowTeacherMenuChoice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoiceResponse" message="tns:IAttendanceTools_ShowTeacherMenuChoice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowStudents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/ShowStudents" message="tns:IAttendanceTools_ShowStudents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/ShowStudentsResponse" message="tns:IAttendanceTools_ShowStudents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStudent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/AddStudent" message="tns:IAttendanceTools_AddStudent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/AddStudentResponse" message="tns:IAttendanceTools_AddStudent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFakeUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/CreateFakeUser" message="tns:IAttendanceTools_CreateFakeUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/CreateFakeUserResponse" message="tns:IAttendanceTools_CreateFakeUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuLevel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAttendanceTools/GetMenuLevel" message="tns:IAttendanceTools_GetMenuLevel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAttendanceTools/GetMenuLevelResponse" message="tns:IAttendanceTools_GetMenuLevel_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAttendanceTools" type="tns:IAttendanceTools">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="LoginUser">
       <soap:operation soapAction="http://tempuri.org/IAttendanceTools/LoginUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserType">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/GetCurrentUserType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentUserTypeString">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAttendanceStatus">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowAttendanceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginTeacher">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/LoginTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -82,6 +240,78 @@
     </wsdl:operation>
     <wsdl:operation name="ShowAttendanceList">
       <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowAttendanceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowStartMenu">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowStartMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterStudent">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/RegisterStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTeacherMenu">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTeacherMenuChoice">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowStudents">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/ShowStudents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStudent">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/AddStudent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFakeUser">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/CreateFakeUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuLevel">
+      <soap:operation soapAction="http://tempuri.org/IAttendanceTools/GetMenuLevel" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

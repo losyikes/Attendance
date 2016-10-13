@@ -28,6 +28,8 @@
     <MetadataFile FileName="System.Net.xsd" MetadataType="Schema" ID="672f9963-90c3-4b77-9102-babbdf49c944" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/AttendanceLib/AttendanceTools/mex" />
     <MetadataFile FileName="System.Net.Sockets.xsd" MetadataType="Schema" ID="9d4c4dd3-3c11-4949-ac4a-5868229835eb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/AttendanceLib/AttendanceTools/mex" />
     <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="e0c032c9-413a-4500-9a84-d118e832b543" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/AttendanceLib/AttendanceTools/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="64983016-37b3-414e-8631-ca0bf83b6cfc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/AttendanceLib/AttendanceTools/mex" />
+    <MetadataFile FileName="System.Reflection.xsd" MetadataType="Schema" ID="5c7811b7-428a-471f-a379-5f43b54b0405" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/AttendanceLib/AttendanceTools/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

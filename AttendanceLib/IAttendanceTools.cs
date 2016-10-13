@@ -14,15 +14,39 @@ namespace AttendanceLib
     public interface IAttendanceTools
     {
         [OperationContract]
-        string LoginUser(string mac, IPAddress ip);
-        
-        bool IsValidIp(IPAddress ip);
+        void LoginUser(string mac, IPAddress ip);
         [OperationContract]
-        bool IsAttendanceSet(string mac);
+        Type GetCurrentUserType();
+        [OperationContract]
+        string GetCurrentUserTypeString();
+        [OperationContract]
+        string ShowAttendanceStatus();
+        [OperationContract]
+        void LoginTeacher();
+        bool IsValidIp();
+        [OperationContract]
+        bool IsAttendanceSet();
         [OperationContract]
         bool CheckAdminAccess();
         [OperationContract]
         string ShowAttendanceList();
+        [OperationContract]
+        string ShowStartMenu();
+       
+        [OperationContract]
+        void RegisterStudent();
+        [OperationContract]
+        string ShowTeacherMenu();
+        [OperationContract]
+        string ShowTeacherMenuChoice(int choice);
+        [OperationContract]
+        string ShowStudents(string status);
+        [OperationContract]
+        void AddStudent(string macAddress, string name);
+        [OperationContract]
+        void CreateFakeUser(string type, string macAddress);
+        [OperationContract]
+        int GetMenuLevel();
         
     }
 }
