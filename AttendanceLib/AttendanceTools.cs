@@ -32,15 +32,18 @@ namespace AttendanceLib
         public void LoginUser(string mac, IPAddress ip)
         {
             currentMac = mac;
+            persist.currentMac = mac;
             currentIp = ip;
             if(persist.studentList.Find(x=>x.IDMacAddress == currentMac) != null)
             {
                 persist.currentUser = persist.studentList.Where(x => x.IDMacAddress == currentMac).FirstOrDefault();
+                RegisterStudent();
             }
             else if(persist.teacherList.Find(x => x.IDMacAddress == currentMac) != null)
             {
                 persist.currentUser = persist.teacherList.Where(x => x.IDMacAddress == currentMac).FirstOrDefault();
             }
+            persist.currentIp = ip;
         }
         public Type GetCurrentUserType()
         {
@@ -52,8 +55,9 @@ namespace AttendanceLib
         }
         public string ShowAttendanceStatus()
         {
+            
             string attendanceText = "";
-            if (IsValidIp())
+            if (IsValidIp(persist.currentIp.ToString()))
             {
                 if (IsAttendanceSet())
                 {
@@ -95,30 +99,22 @@ namespace AttendanceLib
         {
             try
             {
-                bool absenceSet = false;
-                for (int i = 0; i < persist.studentList.Count; i++)
-                {
-                    if (persist.studentList[i].IDMacAddress == currentMac)
-                    {
-                        persist.studentList[i].Absent = false;
-                        persist.currentUser = persist.studentList[i];
-                        absenceSet = true;
-                    }
-                }
-                if (absenceSet)
+                if (persist.studentList.Where(x => x.IDMacAddress == persist.currentMac).FirstOrDefault().Absent == false)
                     return true;
                 else
                     return false;
+                
             }
             catch (Exception)
             {
                 return false;
             }
         }
-        public bool IsValidIp()
+        public bool IsValidIp(string ip)
         {
+            bool isValid = false;
             //public static bool IsLocalIpAddress(string host)
-            string client = currentIp.ToString();
+            string client = persist.currentIp.ToString();
             try
             { // get client IP addresses
                 IPAddress[] clientIPs = Dns.GetHostAddresses(client);
@@ -128,16 +124,19 @@ namespace AttendanceLib
                 foreach (IPAddress clientIP in clientIPs)
                 {
                     // is localhost
-                    if (IPAddress.IsLoopback(clientIP)) return true;
+                    if (IPAddress.IsLoopback(clientIP)) isValid = true;
                     // is local address
                     foreach (IPAddress localIP in localIPs)
                     {
-                        if (clientIP.Equals(localIP)) return true;
+                        if (clientIP.Equals(localIP)) isValid = true;
+                        else isValid = false;
                     }
                 }
             }
-            catch { }
-            return false;
+            catch { isValid = false; }
+            return isValid;
+            
+            
         }
         public string ShowStartMenu()
         {

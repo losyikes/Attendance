@@ -23,7 +23,7 @@ namespace AttendanceLib
         string ShowAttendanceStatus();
         [OperationContract]
         void LoginTeacher();
-        bool IsValidIp();
+        bool IsValidIp(string ip);
         [OperationContract]
         bool IsAttendanceSet();
         [OperationContract]

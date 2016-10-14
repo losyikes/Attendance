@@ -12,49 +12,259 @@ namespace AttendanceClient.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IEchoService")]
-    public interface IEchoService {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IAttendanceTools")]
+    public interface IAttendanceTools {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEchoService/EchoString", ReplyAction="http://tempuri.org/IEchoService/EchoStringResponse")]
-        string EchoString(string text);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/LoginUser", ReplyAction="http://tempuri.org/IAttendanceTools/LoginUserResponse")]
+        void LoginUser(string mac, System.Net.IPAddress ip);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEchoService/EchoString", ReplyAction="http://tempuri.org/IEchoService/EchoStringResponse")]
-        System.Threading.Tasks.Task<string> EchoStringAsync(string text);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/LoginUser", ReplyAction="http://tempuri.org/IAttendanceTools/LoginUserResponse")]
+        System.Threading.Tasks.Task LoginUserAsync(string mac, System.Net.IPAddress ip);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetCurrentUserType", ReplyAction="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeResponse")]
+        System.Type GetCurrentUserType();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetCurrentUserType", ReplyAction="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeResponse")]
+        System.Threading.Tasks.Task<System.Type> GetCurrentUserTypeAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeString", ReplyAction="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeStringResponse")]
+        string GetCurrentUserTypeString();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeString", ReplyAction="http://tempuri.org/IAttendanceTools/GetCurrentUserTypeStringResponse")]
+        System.Threading.Tasks.Task<string> GetCurrentUserTypeStringAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceStatus", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceStatusResponse")]
+        string ShowAttendanceStatus();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceStatus", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceStatusResponse")]
+        System.Threading.Tasks.Task<string> ShowAttendanceStatusAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/LoginTeacher", ReplyAction="http://tempuri.org/IAttendanceTools/LoginTeacherResponse")]
+        void LoginTeacher();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/LoginTeacher", ReplyAction="http://tempuri.org/IAttendanceTools/LoginTeacherResponse")]
+        System.Threading.Tasks.Task LoginTeacherAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet", ReplyAction="http://tempuri.org/IAttendanceTools/IsAttendanceSetResponse")]
+        bool IsAttendanceSet();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/IsAttendanceSet", ReplyAction="http://tempuri.org/IAttendanceTools/IsAttendanceSetResponse")]
+        System.Threading.Tasks.Task<bool> IsAttendanceSetAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CheckAdminAccess", ReplyAction="http://tempuri.org/IAttendanceTools/CheckAdminAccessResponse")]
+        bool CheckAdminAccess();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CheckAdminAccess", ReplyAction="http://tempuri.org/IAttendanceTools/CheckAdminAccessResponse")]
+        System.Threading.Tasks.Task<bool> CheckAdminAccessAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse")]
+        string ShowAttendanceList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowAttendanceList", ReplyAction="http://tempuri.org/IAttendanceTools/ShowAttendanceListResponse")]
+        System.Threading.Tasks.Task<string> ShowAttendanceListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowStartMenu", ReplyAction="http://tempuri.org/IAttendanceTools/ShowStartMenuResponse")]
+        string ShowStartMenu();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowStartMenu", ReplyAction="http://tempuri.org/IAttendanceTools/ShowStartMenuResponse")]
+        System.Threading.Tasks.Task<string> ShowStartMenuAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/RegisterStudent", ReplyAction="http://tempuri.org/IAttendanceTools/RegisterStudentResponse")]
+        void RegisterStudent();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/RegisterStudent", ReplyAction="http://tempuri.org/IAttendanceTools/RegisterStudentResponse")]
+        System.Threading.Tasks.Task RegisterStudentAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenu", ReplyAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenuResponse")]
+        string ShowTeacherMenu();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenu", ReplyAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenuResponse")]
+        System.Threading.Tasks.Task<string> ShowTeacherMenuAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoice", ReplyAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoiceResponse")]
+        string ShowTeacherMenuChoice(int choice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoice", ReplyAction="http://tempuri.org/IAttendanceTools/ShowTeacherMenuChoiceResponse")]
+        System.Threading.Tasks.Task<string> ShowTeacherMenuChoiceAsync(int choice);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowStudents", ReplyAction="http://tempuri.org/IAttendanceTools/ShowStudentsResponse")]
+        string ShowStudents(string status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/ShowStudents", ReplyAction="http://tempuri.org/IAttendanceTools/ShowStudentsResponse")]
+        System.Threading.Tasks.Task<string> ShowStudentsAsync(string status);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/AddStudent", ReplyAction="http://tempuri.org/IAttendanceTools/AddStudentResponse")]
+        void AddStudent(string macAddress, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/AddStudent", ReplyAction="http://tempuri.org/IAttendanceTools/AddStudentResponse")]
+        System.Threading.Tasks.Task AddStudentAsync(string macAddress, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CreateFakeUser", ReplyAction="http://tempuri.org/IAttendanceTools/CreateFakeUserResponse")]
+        void CreateFakeUser(string type, string macAddress);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/CreateFakeUser", ReplyAction="http://tempuri.org/IAttendanceTools/CreateFakeUserResponse")]
+        System.Threading.Tasks.Task CreateFakeUserAsync(string type, string macAddress);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetMenuLevel", ReplyAction="http://tempuri.org/IAttendanceTools/GetMenuLevelResponse")]
+        int GetMenuLevel();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAttendanceTools/GetMenuLevel", ReplyAction="http://tempuri.org/IAttendanceTools/GetMenuLevelResponse")]
+        System.Threading.Tasks.Task<int> GetMenuLevelAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEchoServiceChannel : AttendanceClient.ServiceReference1.IEchoService, System.ServiceModel.IClientChannel {
+    public interface IAttendanceToolsChannel : AttendanceClient.ServiceReference1.IAttendanceTools, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EchoServiceClient : System.ServiceModel.ClientBase<AttendanceClient.ServiceReference1.IEchoService>, AttendanceClient.ServiceReference1.IEchoService {
+    public partial class AttendanceToolsClient : System.ServiceModel.ClientBase<AttendanceClient.ServiceReference1.IAttendanceTools>, AttendanceClient.ServiceReference1.IAttendanceTools {
         
-        public EchoServiceClient() {
+        public AttendanceToolsClient() {
         }
         
-        public EchoServiceClient(string endpointConfigurationName) : 
+        public AttendanceToolsClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public EchoServiceClient(string endpointConfigurationName, string remoteAddress) : 
+        public AttendanceToolsClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public EchoServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AttendanceToolsClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public EchoServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AttendanceToolsClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public string EchoString(string text) {
-            return base.Channel.EchoString(text);
+        public void LoginUser(string mac, System.Net.IPAddress ip) {
+            base.Channel.LoginUser(mac, ip);
         }
         
-        public System.Threading.Tasks.Task<string> EchoStringAsync(string text) {
-            return base.Channel.EchoStringAsync(text);
+        public System.Threading.Tasks.Task LoginUserAsync(string mac, System.Net.IPAddress ip) {
+            return base.Channel.LoginUserAsync(mac, ip);
+        }
+        
+        public System.Type GetCurrentUserType() {
+            return base.Channel.GetCurrentUserType();
+        }
+        
+        public System.Threading.Tasks.Task<System.Type> GetCurrentUserTypeAsync() {
+            return base.Channel.GetCurrentUserTypeAsync();
+        }
+        
+        public string GetCurrentUserTypeString() {
+            return base.Channel.GetCurrentUserTypeString();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetCurrentUserTypeStringAsync() {
+            return base.Channel.GetCurrentUserTypeStringAsync();
+        }
+        
+        public string ShowAttendanceStatus() {
+            return base.Channel.ShowAttendanceStatus();
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowAttendanceStatusAsync() {
+            return base.Channel.ShowAttendanceStatusAsync();
+        }
+        
+        public void LoginTeacher() {
+            base.Channel.LoginTeacher();
+        }
+        
+        public System.Threading.Tasks.Task LoginTeacherAsync() {
+            return base.Channel.LoginTeacherAsync();
+        }
+        
+        public bool IsAttendanceSet() {
+            return base.Channel.IsAttendanceSet();
+        }
+        
+        public System.Threading.Tasks.Task<bool> IsAttendanceSetAsync() {
+            return base.Channel.IsAttendanceSetAsync();
+        }
+        
+        public bool CheckAdminAccess() {
+            return base.Channel.CheckAdminAccess();
+        }
+        
+        public System.Threading.Tasks.Task<bool> CheckAdminAccessAsync() {
+            return base.Channel.CheckAdminAccessAsync();
+        }
+        
+        public string ShowAttendanceList() {
+            return base.Channel.ShowAttendanceList();
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowAttendanceListAsync() {
+            return base.Channel.ShowAttendanceListAsync();
+        }
+        
+        public string ShowStartMenu() {
+            return base.Channel.ShowStartMenu();
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowStartMenuAsync() {
+            return base.Channel.ShowStartMenuAsync();
+        }
+        
+        public void RegisterStudent() {
+            base.Channel.RegisterStudent();
+        }
+        
+        public System.Threading.Tasks.Task RegisterStudentAsync() {
+            return base.Channel.RegisterStudentAsync();
+        }
+        
+        public string ShowTeacherMenu() {
+            return base.Channel.ShowTeacherMenu();
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowTeacherMenuAsync() {
+            return base.Channel.ShowTeacherMenuAsync();
+        }
+        
+        public string ShowTeacherMenuChoice(int choice) {
+            return base.Channel.ShowTeacherMenuChoice(choice);
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowTeacherMenuChoiceAsync(int choice) {
+            return base.Channel.ShowTeacherMenuChoiceAsync(choice);
+        }
+        
+        public string ShowStudents(string status) {
+            return base.Channel.ShowStudents(status);
+        }
+        
+        public System.Threading.Tasks.Task<string> ShowStudentsAsync(string status) {
+            return base.Channel.ShowStudentsAsync(status);
+        }
+        
+        public void AddStudent(string macAddress, string name) {
+            base.Channel.AddStudent(macAddress, name);
+        }
+        
+        public System.Threading.Tasks.Task AddStudentAsync(string macAddress, string name) {
+            return base.Channel.AddStudentAsync(macAddress, name);
+        }
+        
+        public void CreateFakeUser(string type, string macAddress) {
+            base.Channel.CreateFakeUser(type, macAddress);
+        }
+        
+        public System.Threading.Tasks.Task CreateFakeUserAsync(string type, string macAddress) {
+            return base.Channel.CreateFakeUserAsync(type, macAddress);
+        }
+        
+        public int GetMenuLevel() {
+            return base.Channel.GetMenuLevel();
+        }
+        
+        public System.Threading.Tasks.Task<int> GetMenuLevelAsync() {
+            return base.Channel.GetMenuLevelAsync();
         }
     }
 }

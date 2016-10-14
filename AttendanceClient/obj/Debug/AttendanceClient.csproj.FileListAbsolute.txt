@@ -4,15 +4,14 @@ C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceClient\obj\Debug\A
 C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceClient\bin\Debug\AttendanceClient.exe
 C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceClient\bin\Debug\AttendanceClient.pdb
 C:\Users\Dunark\Desktop\Dropbox\Projects\Attendance\AttendanceClient\obj\Debug\AttendanceClient.csprojResolveAssemblyReference.cache
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.exe.config
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.exe
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.pdb
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\obj\Debug\AttendanceClient.exe
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\obj\Debug\AttendanceClient.pdb
-C:\Users\morte_000\Documents\Attendance\AttendanceClient\obj\Debug\AttendanceClient.csprojResolveAssemblyReference.cache
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\bin\Debug\AttendanceClient.exe.config
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\bin\Debug\AttendanceClient.exe
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\bin\Debug\AttendanceClient.pdb
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\obj\Debug\AttendanceClient.exe
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\obj\Debug\AttendanceClient.pdb
 C:\Users\yikes\Dropbox\skole\3.sem\Projects\Projekt 2(Elev fravær)\AttendanceLib\AttendanceClient\obj\Debug\AttendanceClient.csprojResolveAssemblyReference.cache
+C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.exe.config
+C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.exe
+C:\Users\morte_000\Documents\Attendance\AttendanceClient\bin\Debug\AttendanceClient.pdb
+C:\Users\morte_000\Documents\Attendance\AttendanceClient\obj\Debug\AttendanceClient.exe
+C:\Users\morte_000\Documents\Attendance\AttendanceClient\obj\Debug\AttendanceClient.pdb

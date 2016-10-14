@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using AttendanceLib;
+
 using System.ServiceModel.Description;
 
 namespace AttendanceHost
@@ -13,7 +14,8 @@ namespace AttendanceHost
     {
         static void Main(string[] args)
         {
-            Uri baseAddress = new Uri("http://localhost:8000/AttendanceLib/");
+            Console.WriteLine("hej");
+            Uri baseAddress = new Uri("http://localhost:8734/AttendanceLib/");
 
             ServiceHost selfHost2 = new ServiceHost(typeof(AttendanceTools), baseAddress);
 

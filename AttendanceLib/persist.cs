@@ -15,7 +15,8 @@ namespace AttendanceLib
         public static List<Teacher> teacherList = new List<Teacher>();
         public static int menuLevel = 1;
         public static User currentUser;
-
+        public static IPAddress currentIp;
+        public static string currentMac;
         public persist()
         {
 
