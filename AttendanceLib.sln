@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceClient", "Attenda
 		{8A90B8FB-C600-4CE4-B0CB-90428C3789CC} = {8A90B8FB-C600-4CE4-B0CB-90428C3789CC}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceLibTests1", "AttendanceLibTests1\AttendanceLibTests1.csproj", "{EF73A5E8-3551-43BE-8412-07B44CD24DC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{4C13A206-3BF8-4DE8-8388-FF1D09D72B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C13A206-3BF8-4DE8-8388-FF1D09D72B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C13A206-3BF8-4DE8-8388-FF1D09D72B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF73A5E8-3551-43BE-8412-07B44CD24DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF73A5E8-3551-43BE-8412-07B44CD24DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF73A5E8-3551-43BE-8412-07B44CD24DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF73A5E8-3551-43BE-8412-07B44CD24DC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,3 +22,11 @@ C:\Users\morte_000\Documents\Attendance\AttendanceHost\bin\Debug\AttendanceLib.p
 C:\Users\morte_000\Documents\Attendance\AttendanceHost\obj\Debug\AttendanceHost.csprojResolveAssemblyReference.cache
 C:\Users\morte_000\Documents\Attendance\AttendanceHost\obj\Debug\AttendanceHost.exe
 C:\Users\morte_000\Documents\Attendance\AttendanceHost\obj\Debug\AttendanceHost.pdb
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.exe.config
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.exe
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.pdb
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.exe
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\bin\Debug\AttendanceHost.pdb
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\bin\Debug\AttendanceLib.dll
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\bin\Debug\AttendanceLib.pdb
+D:\Skole\Datamatiker\3rd Sem\Group Projects\Attendance\AttendanceHost\obj\Debug\AttendanceHost.csprojResolveAssemblyReference.cache
